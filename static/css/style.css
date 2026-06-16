@@ -1,0 +1,83 @@
+body {
+    background-color: #0d0f12;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.monitor-wrapper {
+    width: 600px;
+    background: #1a1d23;
+    border: 1px solid #2d333b;
+    padding: 2rem;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2d333b;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.scanner-dot { width: 12px; height: 12px; background: #3498db; border-radius: 50%; box-shadow: 0 0 8px #3498db; }
+
+h1 { font-size: 1.1rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+
+.system-status { font-size: 0.65rem; color: #57606a; font-weight: bold; }
+
+.input-section p { font-size: 0.8rem; color: #8b949e; margin-bottom: 8px; }
+
+.path-group { display: flex; gap: 10px; margin-bottom: 1.5rem; }
+
+input {
+    flex-grow: 1;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    padding: 12px;
+    font-family: inherit;
+    outline: none;
+}
+
+button {
+    background: #238636;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { background: #2ea043; }
+
+.status-card {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    padding: 1.5rem;
+    border-top: 4px solid #3498db;
+}
+
+.hash-display, #alert-details { margin: 15px 0; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 4px; }
+
+label { display: block; font-size: 0.65rem; color: #57606a; margin-bottom: 5px; }
+
+code { font-family: 'Courier New', monospace; font-size: 0.85rem; word-break: break-all; color: #58a6ff; }
+
+/* Status Logic Classes */
+.verified { border-top-color: #238636 !important; }
+.alert { border-top-color: #f85149 !important; border-bottom: 2px solid #f85149; }
+.baseline_created { border-top-color: #f1e05a !important; }
+
+.hidden { display: none; }
+
+footer { margin-top: 2rem; text-align: center; }
+.version { font-size: 0.7rem; color: #57606a; margin-bottom: 5px; }
+footer p { font-size: 0.6rem; color: #30363d; letter-spacing: 1px; }

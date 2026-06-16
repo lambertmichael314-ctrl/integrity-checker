@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDS // Integrity Monitor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="monitor-wrapper">
+        <header>
+            <div class="scanner-dot"></div>
+            <h1>File Integrity Monitor</h1>
+            <span class="system-status">SHA-256 ACTIVE</span>
+        </header>
+
+        <section class="input-section">
+            <p>Target File Path:</p>
+            <div class="path-group">
+                <input type="text" id="file-path" placeholder="C:\path\to\sensitive_file.txt" autocomplete="off">
+                <button id="check-btn">ANALYZE FILE</button>
+            </div>
+        </section>
+
+        <div id="status-card" class="status-card hidden">
+            <h2 id="status-title">CHECKING...</h2>
+            <div class="hash-display">
+                <label>CURRENT SIGNATURE:</label>
+                <code id="current-hash">---</code>
+            </div>
+            <div id="alert-details" class="hidden">
+                <label>ORIGINAL BASELINE:</label>
+                <code id="old-hash">---</code>
+            </div>
+            <p id="status-message">Ready for analysis.</p>
+        </div>
+
+        <footer>
+            <div class="version">CORE_v{{ version }}</div>
+            <p>INTEGRITY MONITORING SYSTEM | HOST_BASED_IDS</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
